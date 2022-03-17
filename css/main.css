@@ -436,6 +436,9 @@ footer span {
     nav {
         justify-content: space-between;
     }
+    .overlay-header p {
+        margin-top: -20px;
+    }
     .services .back-txt {
         font-size: 60px;
     }
@@ -448,6 +451,9 @@ footer span {
     }
     .square h3 {
         margin-top: 20px;
+    }
+    .services-sections i {
+        margin-right: 0;
     }
     .services-sections {
         margin: 0 auto;
