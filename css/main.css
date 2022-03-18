@@ -6,7 +6,6 @@ html {
 :root {
     --main-color : #10cab7;
     --sec-color: #2c4755;
-    --main-font-size : 20px;
     --bg-color: #f6f6f6;
 }
 
@@ -24,21 +23,17 @@ body {
 }
 
 /* Header */
-header {
-    height: 100vh;
-}
-
 /* nav bar */
 
 nav {
-    padding: 18px;
+    padding: 20px;
     display: flex;
     flex-flow: nowrap row;
     justify-content: space-around;
     align-items: center;
 }
 
-.logo img{
+.logo {
     width: 60px;
 }
 
@@ -81,22 +76,22 @@ nav {
 }
 
 .nav-links ul li {
-    padding: 15px;
     margin-bottom: 1px;
     background-color: var(--bg-color);
-    transition: 0.3s padding-left ease;
+    transition: 0.4s padding-left ease;
     width: 200px;
-    cursor: pointer;
 }
 
 .nav-links a {
+    display: block;
     text-decoration: none;
     color: #333;
     font-weight: 400;
+    padding: 15px;
 }
 
 .nav-links ul li:hover {
-    padding-left: 25px;
+    padding-left: 10px;
 }
 
 .dropdown:hover::after {
@@ -115,9 +110,8 @@ nav {
 
 /* background */
 .background-img {
-    height: 100%;
-    background-image: url("../Images/landing.jpg");
-    background-repeat: no-repeat;
+    height: calc(100vh - 64px);
+    background: url("../Images/landing.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -126,7 +120,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: wrap column;
+    flex-direction: column;
 }
 
 .background-img .content h1 {
@@ -156,7 +150,7 @@ section .work div{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column wrap;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -178,14 +172,15 @@ section .work div p {
 
 /* services */
 
-.services {
+.sec {
     padding: 60px 0;
 }
+
 .overlay-header {
     text-align: center;
 }
 
-.services .back-txt {
+.back-txt {
     font-size: 100px;
     color: #ebeced;
 }
@@ -211,15 +206,10 @@ section .work div p {
     justify-content: center;
 }
 
-.services-sections .square .square-txt {
-    align-items: flex-start;
-}
-
 .services-sections i{
     color: var(--main-color);
     margin-right: 20px;
     font-size: 30px;
-    align-self: flex-start;
 }
 
 .services-sections h3 {
@@ -232,17 +222,16 @@ section .work div p {
     color: #777;
 }
 
-.services-content .services-img {
+.services-sections .services-img {
     position: relative;
-    height: fit-content;
     width: fit-content;
 }
 
-.services-content .services-img img {
+.services-sections .services-img img {
     width: 260px;
 }
 
-.services-content .services-img::before {
+.services-sections .services-img::before {
     content: "";
     position: absolute;
     right: 0;
@@ -251,12 +240,12 @@ section .work div p {
     width: 40%;
     height: 130%;
     background-color: var(--sec-color);
-    z-index: -999;
+    z-index: -1;
 }
 
 /* Portfolio */
 
-.portfolio {
+.gray-bg {
     background-color: var(--bg-color);
 }
 
@@ -286,7 +275,6 @@ section .work div p {
     color: #777;
 }
 
-
 /* About Section  */
 
 .about-content {
@@ -294,8 +282,6 @@ section .work div p {
     grid-template-columns: auto 650px;
     gap: 0 200px;
     justify-content: center;
-    align-items: center;
-
 }
 
 .about-content .about-img {
@@ -340,21 +326,23 @@ section .work div p {
     width: 100px;
     height: 120%;
     background-color: #ebeced;
-    z-index: -999;
+    z-index: -1;
 }
 
 .about-content .about-img::after {
     content: "";
     height: 78%;
-    width: 110px;
+    width: 40%;
     position: absolute;
-    left: 200px;
+    left: 80%;
     top: -10%;
     border-width: 0 0 80px 80px ;
     border-style: solid;
     border-color:var(--main-color);
-    z-index: -999;
+    z-index: -1;
 }
+
+/* contact section  */
 
 .contact-info {
     text-align: center;
@@ -364,12 +352,11 @@ section .work div p {
 .contact-info a {
     color: var(--main-color);
     font-size: 35px;
-    font-weight: 700;
     font-weight: bold;
     text-decoration: none;
 }
 
-.contact-info p {
+.contact-info>p {
     margin-bottom: 10px;
     font-size: 35px;
     font-weight: 800;
@@ -378,7 +365,6 @@ section .work div p {
 .social {
     margin-top: 20px;
     display: flex;
-    flex-flow: row nowrap;
     justify-content: center;
 }
 
@@ -389,6 +375,8 @@ section .work div p {
 .social i {
     margin-left: 10px;
 }
+
+/* footer  */
 
 footer {
     background-color: var(--sec-color);
@@ -428,7 +416,9 @@ footer span {
         text-align: center;
         display: flex;
         align-items: center;
-        flex-flow: column wrap;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
     }
 }
 
@@ -439,15 +429,12 @@ footer span {
     .overlay-header p {
         margin-top: -20px;
     }
-    .services .back-txt {
+    .back-txt {
         font-size: 60px;
     }
     .square {
-        flex-flow: column wrap;
+        flex-direction: column;
         text-align: center;
-    }
-    .square i {
-        align-self: center;
     }
     .square h3 {
         margin-top: 20px;
@@ -455,20 +442,13 @@ footer span {
     .services-sections i {
         margin-right: 0;
     }
-    .services-sections {
-        margin: 0 auto;
-        width: 95%;
+    .services-sections,
+    section .work,
+    .about-content,
+    .portfolio-cards {
         grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
     }
-    section .work {
-        grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
-    }
-    .about-content {
-        grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
-    }
-    .contact-info a {
-        font-size: 20px;
-    }
+    .contact-info a,
     .contact-info>p {
         font-size: 20px;
     }
