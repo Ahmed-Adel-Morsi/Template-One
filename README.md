@@ -10,7 +10,6 @@ Welcome to Template-One, a simple and elegant template for your web projects. Th
 - [Usage](#usage)
 - [Customization](#customization)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
