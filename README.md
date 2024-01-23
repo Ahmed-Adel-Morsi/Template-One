@@ -2,6 +2,16 @@
 
 Welcome to Template-One, a simple and elegant template for your web projects. This template is designed to provide a clean and modern look, making it suitable for a variety of purposes. Whether you're building a personal portfolio, showcasing a project, or creating a business website, Template-One has got you covered.
 
+## Table of Contents
+
+- [Features](#features)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Customization](#customization)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Features
 
 - Clean and modern design
@@ -69,7 +79,6 @@ body {
 ## Contributing
 
 If you'd like to contribute to Template-One, feel free to submit a pull request. Your contributions are highly welcome!
-
 
 ---
 
