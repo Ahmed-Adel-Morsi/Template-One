@@ -70,9 +70,6 @@ body {
 
 If you'd like to contribute to Template-One, feel free to submit a pull request. Your contributions are highly welcome!
 
-## License
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it for personal or commercial projects.
 
 ---
 
